@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Beginner's Guide to Audiofiles</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Beginner's Guide to CDs</h1>
+
+    <nav>
+      <a href="#why-care">Why should I care?</a>
+      <a href="#ripping-cds">Ripping CDs</a>
+      <a href="#burning-cds">Burn Types</a>
+      <a href="#file-formats">Audio File Formats</a>
+      <a href="#editing-metadata">Editing Metadata</a>
+    </nav>
+  </header>
+
+  <main>
+    <article id="why-care">
+      <h2>Why should I care?</h2>
+
+      <section id="media-ownership">
+        <h3>Media Ownership</h3>
+        
+        <p>
+          In a world where streaming dominates the entertainment industry, people continue to lose grip on the ownership of their
+          favorite forms of entertainment (movies, video games, music, etc.). When you stream music, you are "allowed" by a corporation
+          to "rent" the music from them so long as you utilize their services. Even music purchased through a streaming service is still a
+          "rental", because you can only use it so long as you follow their terms of service. Possessing the physical media (or at least the
+          digital files) enables you to retake control over your favorite forms of entertainment.
+        </p>
+      </section>
+
+      <section id="preservation">
+        <h3>Preseravation</h3>
+
+        <p>
+          Nothing lasts forever, but we can make sure our favorite songs can last as long as they can. Large corporations rent out music through
+          streaming services and "digital purchases" that are more like rentals than purchases. By ensuring you are ripping your CDs and purchasing
+          digital music that provides you with the files for said music, you can ensure you can protect the entertainment you love. Even physical CDs
+          are susceptible to <a href="https://en.wikipedia.org/wiki/Disc_rot" target="_blank">disc rot</a>, so making backups and copies is important to
+          ensure the longevity of the music you enjoy.
+        </p>
+      </section>
+    </article>
+
+    <article id="ripping-cds">
+      <h2>Ripping CDs</h2>
+
+      <section id="note-on-ripping">
+        <h3>A Note on "Ripping" CDs</h3>
+
+        <p>
+          While "Ripping" is the official term used for acquiring the music off of a CD,
+          it may lead some to belive that ripping music from a CD will cause it to be unusable
+          in the future. Rest assured, the process of ripping a CD will only <em>copy</em> the
+          audio files off of the source CD, leaving it perfectly usable when the process is complete.
+          CDs can also be ripped multiple times, so if you need to rip your music into a different file
+          format, you can do that as much as you wish!
+        </p>
+      </section>
+
+      <section id="software-options">
+        <h3>Software Options</h3>
+
+        <p>
+          <b>Note: </b> for the most part, only software <em><b>built-in</b></em> to an operating system will be recommended for convenience.
+          There are many other options out there though, so do some research and choose what works best for you! 
+        </p>
+
+        <section id="windows-media-player-legacy">
+          <h4><b>Windows: </b> Windows Media Player (Legacy)</h4>
+
+          <p>
+            The current modern Windows Media Player application is missing some options when it comes to ripping music,
+            so because of that the <em>Legacy</em> version of Windows Media Player is recommended. To easily enable the <em>Windows Media Player (Legacy)</em> application,
+            copy and paste the following script into <em>PowerShell</em> (you must run <em>PowerShell</em> as an
+            <a href="https://learn.microsoft.com/en-us/answers/questions/1338912/how-to-run-powershell-as-administrator">administrator</a>):
+          </p>
+
+          <code>
+            <span class="win-cmd">Enable-WindowsOptionalFeature</span> 
+            <span class="win-flag">-</span>FeatureName 
+            <span class="win-string">"WindowsMediaPlayer"</span> 
+            <span class="win-flag">-</span>All 
+            <span class="win-flag">-</span>Online
+          </code>
+
+          <p>If you wish to disable <em>Windows Media Player (Legacy)</em> in the future, input the following command into <em>PowerShell</em> as an administrator:</p>
+
+          <code>
+            <span class="win-cmd">Disable-WindowsOptionalFeature</span> 
+            <span class="win-flag">-</span>FeatureName 
+            <span class="win-string">"WindowsMediaPlayer"</span>
+            <span class="win-flag">-</span>Online
+          </code>
+        </section>
+
+        <section id="apple-music">
+          <h4>Apple Music</h4>
+
+          <p>
+            The <em>Music</em> app on macOS is capable of ripping CDs. Here's a <a href="https://www.howtogeek.com/how-to-rip-audio-cd-mac/">guide</a> on how to do it.
+          </p>
+        </section>
+
+        <section id="linux-ripper" style="padding-bottom: 24px;">
+          <h4>Linux CD Ripping</h4>
+
+          <p>
+            Because of the wide variety of Linux distrobutions, it is best you search for one that will work on the distro you use. However if you use 
+            <em>Debian / Ubuntu / Linux Mint</em>, <em>Asunder</em> is a great choice.
+          </p>
+
+          <code> sudo apt install asunder </code>
+        </section>
+      </section>
+    </article>
+
+    <article id="file-formats">
+      <h2>Audio File Formats</h2>
+
+      <section id="compression-types">
+        <h3>Compression</h3>
+
+        <section id="lossless-compression">
+          <h4>Lossless Compression</h4>
+
+          <ul>
+            <li>Data is not lost when ripping from CD, but will result in relatively larger file sizes.</li>
+            <li>
+              File size should not matter when burning music to a CD when using the <em>Audio CD</em> 
+              burn type, but can be a problem when storing music on a computer or phone depending 
+              on what lossless file format you select.
+            </li>
+            <li>
+              Depending on the lossless file type,
+              audio files may still be compressed without the loss of audio quality.
+            </li>
+          </ul>
+        </section>
+
+        <section id="lossy-compression">
+          <h4>Lossy Compression</h4>
+
+          <ul>
+            <li>
+              Audio data is lost, resulting in a lesser audio quality compared to lossless, but results in 
+              relatively smaller file sizes compared to lossless compression.
+            </li>
+            <li>
+              Can be a good choice when burning a large quantity of audio files to a CD using the Data CD 
+              burn type.
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section id="common-formats">
+        <h3>Common File Formats</h3>
+
+        <section id="wav-format">
+          <h4><em><b>.wav</b></em></h4>
+          
+          <p>
+            <b>Compression Type: </b> Lossless; no compression
+          </p>
+          
+          <table>
+            <thead>
+              <tr>
+                <td>Pros</td>
+                <td>Cons</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lossless compression = no lost audio quality.</td>
+                <td><em>.wav</em> is <b>NOT</b> compressed, resulting in large file sizes</td>
+              </tr>
+              <tr>
+                <td>Widely supported file format.</td>
+                <td>Does <b>NOT</b> natively support metadata.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            <b>Important: </b> If you decide to rip your music to <em>.wav</em> files, then you should burn 
+            them to CD using the <em><b>Audio CD</b></em> option. This will allow you fit high quality audio 
+            into as many minutes as your CD allows.
+          </p>
+        </section>
+
+        <section id="flac-format">
+          <h4><em><b>.flac</b></em></h4>
+          
+          <p>
+            <b>Compression Type: </b>Lossless; compressed
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <td>Pros</td>
+                <td>Cons</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Lossless compression = no lost audio quality.
+                </td>
+                <td>
+                  "Newer" than <em>.wav</em>, so you may run into rare compatibility issues with computer software.
+                </td>
+              </tr>
+              <tr>
+                <td>Compressed without losing audio quality = smaller file sizes than <em>.wav</em>.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Native support for metadata.</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            <b>Important: </b> If you decide to rip your music to <em>.flac</em> files, then you should burn 
+            them to CD using the <em><b>Audio CD</b></em> option. This will allow you fit high quality audio 
+            into as many minutes as your CD allows while keeping smaller file sizes on your computer.
+          </p>
+        </section>
+
+        <section id="mp3-format">
+          <h4><em><b>.mp3</b></em></h4>
+
+          <p>
+            <b>Compression Type: </b>Lossy; compressed.
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <td>Pros</td>
+                <td>Cons</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lossy compression = smaller file sizes</td>
+                <td>Lossy compression resulting in lower audio quality compared to source.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <p>
+          <b>Important: </b> If you decide to rip your music to <em>.mp3</em> files, then you should burn
+          them to the CD using the <em><b>Data CD</b></em> option. This will allow you to fit as many songs 
+          as possible onto your CD within the bounds of its file storage limit. However, keep in mind not all
+          players will support this option, so make sure you know your CD player will be able to read the disc
+          first.
+        </p>
+      </section>
+
+      <section id="file-conversion">
+        <!-- TODO this section -->
+        <h3>Converting Audio Files to Another Format</h3>
+        
+        <section id="audacity">
+          <h4>Audacity (and alternatives)</h4>
+        </section>
+
+        <section id="why-not-online-conversion">
+          <h4>Why not use an online file converter?</h4>
+        </section>
+      </section>
+
+      <section id="metadata">
+        <h3>What is Metadata?</h3>
+
+        <p>
+          Put simply, metadata is "data about data". In this case, the main data is the audio in the file, and the metadata is information 
+          about that audio, such as the artist, album, track number, etc.
+        </p>
+      </section>
+
+      <section id="recommendations">
+        <h3>My Recommendations</h3>
+
+        <p>Suggested file formats for your use-cases:</p>
+
+        <table>
+          <thead>
+            <tr>
+              <td>
+                Use-Case
+              </td>
+              <td>
+                Suggested File Type
+              </td>
+              <td>Suggested Burn Type</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>You prefer higher quality audio with the drawback of comparatively larger file sizes.</td>
+              <td><em>.flac</em></td>
+              <td>Audio CD</td>
+            </tr>
+            <tr>
+              <td>You prefer smaller file sizes with the drawback of comparatively lower quality audio.</td>
+              <td><em>.mp3</em></td>
+              <td>Data CD</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Utilizing `.wav` is not recommended due to its large file sizes and lack of support for metadata.
+          However, if you run into issues with <em>.flac</em> files then <em>.wav</em> can be used instead.
+        </p>
+
+        <p>
+          <b>Note: </b> The above use cases apply to phones as well. 
+          Applications such as 
+          <a href="https://www.videolan.org/vlc/" target="_blank">VLC Media Player</a> 
+          and 
+          <a href="https://powerampapp.com/">PowerAmp</a> support both <em>.flac</em> and <em>.mp3</em>,
+          so choose the proper file type for your use case.
+        </p>
+      </section>
+    </article>
+
+    <article id="burning-cds">
+      <h2>Burning CDS</h2>
+      
+      <section id="burn-types">
+        <h3>Burn Types</h3>
+        
+        <section id="audio-cd">
+          <h4>Audio CD</h4>
+  
+          <ul>
+            <li>Relies on the <b>amount of minutes</b>of audio that can be stored on a CD.</li>
+            <li>Use with higher quality audio formats (such as <em>.flac</em> or <em>.wav</em>) that allow for a higher quality sound.</li>
+            <li>
+              Does not burn the files, rather the audio itself is burned.
+              Because of this, you should utilize higher quality audio formats to burn higher quality audio.
+            </li>
+            <li>Most compatiblity with CD players.</li>
+            <li>
+              Different CDs will allow different lengths of audio to be stored on them. 
+              Your CD writing software should be able to detect the total length of audio storable,
+              before burning your CD and prevent you from burning it until you meet the time limit.
+            </li>
+          </ul>
+
+          <p>
+            <b>Important:</b> There is a function that Audio CD can use called "CD-Text".
+            This function allows you to burn metadata to the CD for each audio file. Normally each file
+            will display in a player as "Track 01", "Track 02", etc. CD-Text can change that display 
+            track name, artist, etc., but it is not perfect and may not work properly (meaning that disc
+            still plays but doesn't display metadata). Regardless of your attempts to utilize CD-Text, you
+            should still write down the song order and keep it with your CD.
+          </p>
+        </section>
+
+        <section id="data-cd">
+          <h4>Data CD</h4>
+
+          <ul>
+            <li>Relies on the <b>storage space</b> of files that can be stored on a CD.</li>
+            <li>
+              Less likely to be compatible with some CD players. Check to ensure your player can read Data CDS
+              (sometimes referred to as mp3 CDs).
+            </li>
+            <li>Use with lower quality audio formats to fit many more songs onto your CD.</li>
+            <li>
+              Burns the audio as the file format to the CD, rather than just the audio. 
+              Because of this, you should utilize lower quality file formats that will allow
+              you to fit more songs onto a CD due to smaller file sizes.
+            </li>
+            <li>
+              More reliable to store the metadata of a song and display it on your player 
+              (if player supports this feature)
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section id="general-burn-tips">
+        <h3>Tips for Burning CDs</h3>
+      </section>
+    </article>
+
+    <article id="editing-metadata">
+      <h2>Editing Metadata</h2>
+
+      <p>
+        <em><b>Important Note: </b></em> The following directions may not work if the file type you choose does not support metadata.
+        The following example was created using a <em>.flac</em> file.
+      </p>
+
+      <section id="windows">
+        <h3>Windows</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <td>Step #</td>
+              <td>Description</td>
+              <td>Image</td>
+            </tr>
+          </thead>
+        </table>
+      </section>
+
+      <section id="linux">
+        <h3>Linux</h3>
+
+        <p>
+          <b>Note: </b> This example will utilize <em>Picard</em> to edit file metadata. 
+          This guide will not instruct you on how to detect the CD in your computer on Linux.
+          You can install Picard onto your computer using one of the following commands:
+        </p>
+
+        <div class="debian">
+          <h4>Debian / Ubuntu / Linux Mint</h4>
+  
+          <code>
+            sudo apt install picard
+          </code>
+        </div>
+
+        <div class="red-hat">
+          <h4>Red Hat / Fedora / CentOS / AlmaLinux</h4>
+
+          <code>
+            sudo dnf install picard
+          </code>
+        </div>
+
+        <div class="arch">
+          <h4>Arch Linux / Manjaro</h4>
+
+          <code>
+            sudo pacman -S picard
+          </code>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <td>Step #</td>
+              <td>Description</td>
+              <td>Image</td>
+            </tr>
+          </thead>
+        </table>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <a href="https://github.com/zdodson21/beginner-guide-to-cds" target="_blank">GitHub Repo</a>
+    <a href="https://github.com/zdodson21/beginner-guide-to-cds/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
+    <a href="https://github.com/zdodson21/beginner-guide-to-cds/blob/main/LICENSE" target="_blank">License</a>
+    <a href="https://github.com/zdodson21/beginner-guide-to-cds/blob/main/ATTRIBUTION.md" target="_blank">Attribution</a>
+  </footer>
+</body>
+</html>
