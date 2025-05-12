@@ -82,7 +82,7 @@ code {
 }
 
 .win-string {
-  color: #a5d6ff
+  color: #a5d6ff;
 }
 
 .arch {
@@ -96,5 +96,5 @@ footer {
   justify-content: space-evenly;
   margin-top: 12px;
   border-top: var(--standard-border);
-  padding: 12px 0px 12px 0px;
+  padding: 12px 0px;
 }
