@@ -4,9 +4,9 @@
 
 Anything that can help beginner CD users better understand the process of using a CD, including but not limited to information about:
 
-* Audio file formats (please stick to contributing information about the formats already in the web page)
-* The process of ripping & burning CDs
-* Anything that could benefit a *beginner* in the process. What do you wish you knew when you started taking control of the media you use?
+- Audio file formats (please stick to contributing information about the formats already in the web page)
+- The process of ripping & burning CDs
+- Anything that could benefit a _beginner_ in the process. What do you wish you knew when you started taking control of the media you use?
 
 ## Rules
 
