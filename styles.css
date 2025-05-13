@@ -46,6 +46,10 @@ article > section:not(:first-of-type) {
   border-top: 1px dashed light-dark(black, white);
 }
 
+article > section > section:not(:first-of-type) {
+  border-top: 1px dotted light-dark(black, white)
+}
+
 /* TODO make table data look much better */
 td {
   padding: 0px 4px;
